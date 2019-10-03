@@ -1,9 +1,15 @@
 package com.example.animaldirectory.models
 
 import android.media.MediaPlayer
+import android.os.Parcel
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 
-class Animal (val species: String,
-              val age: String,
-              val avgHeight: String,
-              val avgWeight: String,
-              val animalSound: String)
+@Parcelize
+data class Animal(
+    var species: String,
+    var category: String,
+    var avgHeight: String,
+    var avgWeight: String,
+    var animalSound: String
+) : Parcelable

@@ -7,7 +7,7 @@
     tools:context=".views.AnimalList">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvMain"
+        android:id="@+id/rvAnimals"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="16dp"
