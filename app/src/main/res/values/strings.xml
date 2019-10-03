@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AnimalDirectory</string>
+    <string name="zoo_title">ZOO TITLE</string>
+    <string name="animal_categories">ANIMAL CATEGORIES</string>
+</resources>
