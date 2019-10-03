@@ -17,7 +17,7 @@ class AnimalAdapter(
     private val animalDelegate: AnimalDelegate
 ) : RecyclerView.Adapter<AnimalAdapter.AnimalViewHolder>() {
 
-    interface AnimalDelegate{
+    interface AnimalDelegate {
         fun selectAnimal(animal: Animal)
     }
 
@@ -34,7 +34,7 @@ class AnimalAdapter(
     override fun onBindViewHolder(holder: AnimalViewHolder, position: Int) {
         holder.apply {
             animalSpecies.text = animalList[position].species
-            viewGroup.setOnClickListener{
+            viewGroup.setOnClickListener {
                 animalDelegate.selectAnimal(animalList[position])
             }
 

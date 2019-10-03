@@ -17,7 +17,7 @@ class AnimalCategories : AppCompatActivity() {
     }
 
     private fun setUpView() {
-        val categoryList = arrayListOf("Mammals", "Reptile", "Amphibians", "Bird")
+        val categoryList = arrayListOf("Mammals", "Reptile", "Amphibians", "Birds")
 
         lvAnimalCategories.adapter = ArrayAdapter(
             this,
@@ -28,34 +28,41 @@ class AnimalCategories : AppCompatActivity() {
 
         lvAnimalCategories.setOnItemClickListener { parent, view, position, id ->
             when (parent.getItemAtPosition(position)) {
-                "Mammals" -> {
-                    val intent = Intent(this, AnimalList::class.java)
-                    val mammalList = arrayListOf<Animal>()
-
-                    val monkey = Animal(
-                        "Deer",
-                        "Mammal",
-                        "20'",
-                        "3000lbs",
-                        "sound_file_string"
-                    )
-
-                    val bear = Animal(
-                        "Bear",
-                        "Mammal",
-                        "2.6 meter'",
-                        "800 kilograms",
-                        "sound_file_string"
-                    )
-
-                    mammalList.add(monkey)
-                    mammalList.add(bear)
-
-
-                    intent.putParcelableArrayListExtra("animal", mammalList)
-                    startActivity(intent)
-                }
+                "Mammals" -> startAnimalList()
+                "Reptile" -> startAnimalList()
+                "Amphibians" -> startAnimalList()
+                "Birds" -> startAnimalList()
             }
         }
+    }
+
+    fun startAnimalList() {
+        val intent = Intent(this, AnimalList::class.java)
+        val mammalList = arrayListOf<Animal>()
+
+        val monkey = Animal(
+            "Deer",
+            "Mammal",
+            "20'",
+            "3000lbs",
+            "sound_file_string"
+        )
+
+        val bear = Animal(
+            "Bear",
+            "Mammal",
+            "2.6 meter'",
+            "800 kilograms",
+            "sound_file_string"
+        )
+
+        mammalList.add(monkey)
+        mammalList.add(bear)
+
+
+        intent.putParcelableArrayListExtra("animal", mammalList)
+        startActivity(intent)
+
+
     }
 }

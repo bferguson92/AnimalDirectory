@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(view: View) {
-        when(view.id){
+        when (view.id) {
             R.id.btnCategoriesOfAnimals -> {
                 val intent = Intent(this, AnimalCategories::class.java)
                 startActivity(intent)

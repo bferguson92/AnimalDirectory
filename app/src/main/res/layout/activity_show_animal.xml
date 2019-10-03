@@ -10,32 +10,32 @@
         android:id="@+id/tvAnimalName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvAnimalCategory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tvAnimalName"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvAnimalName" />
 
     <TextView
         android:id="@+id/tvAnimalHeight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tvAnimalCategory"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvAnimalCategory" />
 
     <TextView
         android:id="@+id/tvAnimalWeight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tvAnimalHeight"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvAnimalHeight" />
 
     <Button
         android:id="@+id/btnPlaySound"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/play_sound"
         android:onClick="onClick"
+        android:text="@string/play_sound"
         app:layout_constraintTop_toBottomOf="@+id/tvAnimalWeight" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
